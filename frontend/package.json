@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:7000",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@babel/core": "^7.14.3",
     "@testing-library/jest-dom": "^5.11.10",
@@ -50,5 +50,9 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

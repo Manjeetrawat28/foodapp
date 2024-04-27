@@ -82,16 +82,16 @@ export default function About() {
     <StyledAbout>
       <AboutWrapper cassName="flex">
         <HistorySection>
-          <SectionTitle>Sobre Nosotros</SectionTitle>
+          <SectionTitle>About us</SectionTitle>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            temporibus quod itaque mollitia quidem. Eos nemo nam corrupti ipsam
-            iusto facilis sit blanditiis, placeat omnis amet voluptatem. Dolor,
-            recusandae atque?. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Incidunt voluptates quasi corporis nihil pariatur
-            repudiandae debitis! Sed sit, quaerat laudantium consectetur
-            quibusdam ab aut laboriosam veniam ducimus. Odit, sed aperiam!
+            Hello, it's really a pain to be followed. Sorrow
+            times that therefore resilience indeed For no one corrupted them
+            just let it be easy to be flattered, let every man be pleased with pleasure. Pain,
+            to refuse and? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Pleasures fall as if the body had nothing to spare
+            You must be rejected! But let it be, let him seek those who praise him
+            to some we bring a laborious pardon from or. He hates it, but I'll open it!
           </p>
           <Features>
             <div>
