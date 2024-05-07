@@ -44,7 +44,7 @@ export default function useOrderNotification() {
         .find((state) => state.confirmed === true);
 
       setActualizationCount(setActualizationCount + 1);
-      setOrderActualizationMessage(`Pedido ${lastUpdateState.name}`);
+      setOrderActualizationMessage(`Order ${lastUpdateState.name}`);
     });
   }
 

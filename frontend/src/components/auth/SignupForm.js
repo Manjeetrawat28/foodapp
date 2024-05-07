@@ -92,16 +92,16 @@ export function UserNameInput({ register, errors, defaultValue }) {
         <ErrorMessage>{errors.userName.message}</ErrorMessage>
       )}
       <TextInput
-        placeholder="Tu nombre..."
+        placeholder="Your Name..."
         name="userName"
         type="text"
         defaultValue={defaultValue || ""}
         data-testid="nameInput"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*The field is required",
           pattern: {
             value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü]+$/,
-            message: "*Nombre no valido",
+            message: "*Invalid Name",
           },
         })}
         style={{ borderColor: errors.userName && "#bf0000" }}
@@ -117,15 +117,15 @@ export function UserLastNameInput({ register, errors, defaultValue }) {
       )}
       <TextInput
         type="text"
-        placeholder="Tu apellido ..."
+        placeholder="Your last name ..."
         data-testid="lastNameInput"
         defaultValue={defaultValue || ""}
         name="userLastName"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*This field is required",
           pattern: {
             value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü]+$/,
-            message: "*Apellido no valido",
+            message: "*Invalid Last Name",
           },
         })}
         style={{ borderColor: errors.userLastName && "#bf0000" }}
@@ -141,16 +141,16 @@ export function UserEmailInput({ register, errors }) {
       )}
       <TextInput
         type="email"
-        placeholder="Tu email..."
+        placeholder="Your Email"
         name="userEmail"
         data-testid="emailInput"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*This Field is Required",
 
           pattern: {
             value:
               /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
-            message: "*Email no valido",
+            message: "*Invalid Email",
           },
         })}
         style={{ borderColor: errors.userEmail && "#bf0000" }}
@@ -175,10 +175,10 @@ export function UserPasswordInput({
         data-testid="passwordInput"
         autocomplete={false}
         ref={register({
-          required: "*El campo es requrido",
+          required: "*This field is required",
           minLength: {
             value: 5,
-            message: "*El largo mínimo es de 5 carácteres",
+            message: "*The minimum length is 5 characters",
           },
         })}
         style={{ borderColor: errors[name] && "#bf0000" }}
@@ -198,10 +198,10 @@ export function UserNewPasswordInput({ register, errors, placeholder }) {
         type="password"
         name="userNewPassword"
         ref={register({
-          required: "*El campo es requrido",
+          required: "*This field is required",
           minLength: {
             value: 5,
-            message: "*El largo mínimo es de 5 carácteres",
+            message: "*The minimum length is 5 characters",
           },
         })}
         style={{ borderColor: errors.userNewPassword && "#bf0000" }}
@@ -228,7 +228,7 @@ export default function SignupForm() {
         <UserPasswordInput
           errors={errors}
           register={register}
-          placeholder="Tu contraseña..."
+          placeholder="Your Password"
         />
 
         <ErrorServerMessage>{serverError}</ErrorServerMessage>

@@ -14,7 +14,7 @@ export default function useDinamicDotSlider(testimonials) {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 4000);
+    const intervalId = setInterval(nextSlide, 3000);
     return () => clearInterval(intervalId);
   });
 

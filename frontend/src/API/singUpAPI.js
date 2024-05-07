@@ -1,36 +1,67 @@
-import { POST } from "../utils/http";
+// import { POST } from "../utils/http";
 
-async function singUpAPI({
-  setIsFormLoading,
-  setServerError,
+// async function singUpAPI({
+//   setIsFormLoading,
+//   setServerError,
 
-  history,
-  info,
-}) {
+//   history,
+//   info,
+// }) {
+//   try {
+//     const { response, json } = await POST("/api/auth/singUp", info);
+
+//     setIsFormLoading(false);
+
+//     if (json.email) {
+//       setServerError("");
+
+//       const { email } = json;
+
+//       localStorage.setItem("toConfirmUser", email);
+
+//       setTimeout(() => {
+//         return history.push("/#/authentication/confirmation");
+//       }, 1000);
+//     }
+
+//     if (response.status === 400) {
+//       setServerError(json.message);
+//       return;
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// export default singUpAPI;
+import { useState } from 'react';
+import { POST } from '../utils/http';
+
+const signUpAPI = async ({ setIsFormLoading, setServerError, history, info, onError }) => {
   try {
-    const { response, json } = await POST("/api/auth/singUp", info);
+    setIsFormLoading(true);
+
+    const { response, json } = await POST('/api/auth/signUp', info);
 
     setIsFormLoading(false);
 
     if (json.email) {
-      setServerError("");
+      setServerError('');
 
       const { email } = json;
 
-      localStorage.setItem("toConfirmUser", email);
+      localStorage.setItem('toConfirmUser', email);
 
       setTimeout(() => {
-        return history.push("/#/authentication/confirmation");
+        history.push('/authentication/confirmation');
       }, 1000);
-    }
-
-    if (response.status === 400) {
+    } else if (response.status === 400) {
       setServerError(json.message);
-      return;
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
+    onError('Failed to sign up');
   }
-}
+};
 
-export default singUpAPI;
+export default signUpAPI;

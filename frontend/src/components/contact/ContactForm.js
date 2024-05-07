@@ -117,14 +117,14 @@ export default function ContactForm() {
           )}
           <TextInput
             type="text"
-            placeholder="Tu Nombre Completo..."
+            placeholder="Your Full Name"
             name="userName"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*The field is required",
 
               pattern: {
                 value: /^[A-Za-zñÑáÁéÉíÍóÓúÚÜü\s\w]+$/,
-                message: "*Nombre no valido",
+                message: "*Invalid name",
               },
             })}
             style={{ borderColor: errors.userName && "#bf0000" }}
@@ -134,15 +134,15 @@ export default function ContactForm() {
           )}
           <TextInput
             type="email"
-            placeholder="Tu email..."
+            placeholder="your email..."
             name="userEmail"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*The field is required",
 
               pattern: {
                 value:
                   /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
-                meassage: "*Email no valido",
+                meassage: "*Email Invalid",
               },
             })}
             style={{ borderColor: errors.userEmail && "#bf0000" }}
@@ -153,10 +153,10 @@ export default function ContactForm() {
 
           <TextInput
             type="text"
-            placeholder="Asunto..."
+            placeholder="Affair..."
             name="subject"
             ref={register({
-              required: "*El campo es requrido",
+              required: "*This field is required",
             })}
             style={{ borderColor: errors.subject && "#bf0000" }}
           />
@@ -164,26 +164,26 @@ export default function ContactForm() {
             <ErrorMessage>{errors.userMessage.message}</ErrorMessage>
           )}
           <Textarea
-            placeholder="Tu mensaje..."
+            placeholder="Your message"
             name="userMessage"
             ref={register({
-              required: "*El campo es requerido",
+              required: "*This field is required",
               maxLength: {
                 value: 255,
-                message: "*Tu mensaje no debe exceder los 255 carácteres",
+                message: "*Your message must not exceed 255 characters",
               },
             })}
             style={{ borderColor: errors.userMessage && "#bf0000" }}
           />
-          <ButtonPrimary as="input" type="submit" value="Enviar mensaje" />
+          <ButtonPrimary as="input" type="submit" value="Send Message" />
         </Form>
       </FormSection>
       <InfoSection>
         <ContactTitle>Contactenos</ContactTitle>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla accumsan
-          metus. Ipsum dolor sit amet, consectetur adipiscing elit nulla
-          accumsan.
+        Customer service is very important, there will be no customer support
+          fear The pain is very important, there will be no coaching
+          layer
         </p>
         <List>
           <ListItem>

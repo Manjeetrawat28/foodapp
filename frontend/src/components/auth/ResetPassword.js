@@ -56,17 +56,17 @@ export default function ForgotPassword() {
           <UserPasswordInput
             register={register}
             errors={errors}
-            placeholder="Nueva contraseña..."
+            placeholder="New Password..."
           />
           <UserPasswordInput
             register={register}
             errors={errors}
-            name="confirmPassword"
-            placeholder="Confirnmar contraseña..."
+            name="confirm Password"
+            placeholder="Confirm Password..."
           />
           <ErrorServerMessage>{serverError}</ErrorServerMessage>
 
-          <ButtonPrimary as="input" type="submit" value="Enviar" />
+          <ButtonPrimary as="input" type="submit" value="to send" />
           {isFormLoading && <LoaderSpinner small />}
         </Form>
       </FormCard>

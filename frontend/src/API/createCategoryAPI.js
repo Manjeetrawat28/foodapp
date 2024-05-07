@@ -12,3 +12,4 @@ async function createCategoryAPI({ token, info, onSuccess }) {
   }
 }
 export default createCategoryAPI;
+

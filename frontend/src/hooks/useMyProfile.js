@@ -15,7 +15,7 @@ export default function useMyProfile() {
   };
   const onError = () => {
     window.alert(
-      "Lo siento, hubo un error en el servidor y la sesion no pudo cerrarse"
+      "Sorry, there was a server error and the session could not be closed."
     );
   };
   const handleLogout = async () => {

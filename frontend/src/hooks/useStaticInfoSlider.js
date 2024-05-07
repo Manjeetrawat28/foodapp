@@ -20,7 +20,7 @@ const prevSlide = ( ) =>{
 
 }
  useEffect(() => {
-   const intervalId = setInterval(nextSlide , 4000);
+   const intervalId = setInterval(nextSlide , );
    return () => clearInterval(intervalId);
  });
 return { prevSlide, nextSlide,moveToSlide,slide}

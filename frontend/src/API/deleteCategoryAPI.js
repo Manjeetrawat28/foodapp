@@ -13,3 +13,4 @@ export default async function deleteCategoryAPI({ categorySelectId, token }) {
     console.log(err);
   }
 }
+
