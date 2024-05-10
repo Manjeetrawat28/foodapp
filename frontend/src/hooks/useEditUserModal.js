@@ -1,49 +1,49 @@
 
-import {useState} from 'react' 
+import { useState } from 'react'
 import updateUserAPI from '../API/updateUserAPI'
-import {useStorage} from '../context/useStorage'
+import { useStorage } from '../context/useStorage'
 
 
 
-export default  function useEditUserModal({setIsEditing}){
+export default function useEditUserModal({ setIsEditing }) {
 
-  const {token,setAllUsers} = useStorage()
-  
-const [serverError,setServerError] = useState("")
-const [isFormLoading,setFormIsLoading] = useState(false)
+  const { token, setAllUsers } = useStorage()
 
- async function editUser(e,id) {
+  const [serverError, setServerError] = useState("")
+  const [isFormLoading, setFormIsLoading] = useState(false)
 
-  e.preventDefault();
-const roles = e.target.role.value
+  async function editUser(e, id) {
 
-const info ={
-roles,
-}
+    e.preventDefault();
+    const roles = e.target.role.value
 
-await updateUserAPI({
-  setFormIsLoading,
-setIsEditing,
-setServerError,
-info,
-setAllUsers,
-token,
-id
-})
-  
+    const info = {
+      roles,
+    }
+
+    await updateUserAPI({
+      setFormIsLoading,
+      setIsEditing,
+      setServerError,
+      info,
+      setAllUsers,
+      token,
+      id
+    })
+
   }
 
- const handelReset = () =>{
-setIsEditing(false);
- setServerError("");
-}
-const handelSubmit = (e,userId) =>{
-  editUser(e,userId)
-}
+  const handelReset = () => {
+    setIsEditing(false);
+    setServerError("");
+  }
+  const handelSubmit = (e, userId) => {
+    editUser(e, userId)
+  }
   return {
-  handelReset,
-handelSubmit,
+    handelReset,
+    handelSubmit,
     serverError,
-isFormLoading
-} 
-     }
+    isFormLoading
+  }
+}

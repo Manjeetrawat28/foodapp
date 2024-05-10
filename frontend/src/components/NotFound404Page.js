@@ -43,16 +43,16 @@ font-size:60px;
 
     }
 `;
-export default function NotFound404Page(){
+export default function NotFound404Page() {
 
-return(
-  <Page>
-    <div>
-      <ErrorCode>🧂</ErrorCode>
-    <ErrorCode>Error 404</ErrorCode>
-    <h2>Page Not Found</h2>
-    </div>
+  return (
+    <Page>
+      <div>
+        <ErrorCode>🧂</ErrorCode>
+        <ErrorCode>Error 404</ErrorCode>
+        <h2>Page Not Found</h2>
+      </div>
 
-  </Page>
-);
+    </Page>
+  );
 }

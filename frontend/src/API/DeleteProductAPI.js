@@ -2,7 +2,7 @@ import { DELETE, GET } from "../utils/http";
 
 async function deleteProductAPI(token, id, setProducts) {
   const deleteConfirmation = window.confirm(
-    "El producto será eliminado de la base de datos ¿Esta seguro? "
+    "The product will be removed from the database. Are you sure? "
   );
 
   if (deleteConfirmation) {
@@ -16,7 +16,7 @@ async function deleteProductAPI(token, id, setProducts) {
       }
 
       if (response.status === 403)
-        return alert("Se require rol de Administrador");
+        return alert("Administrator role required");
     } catch (err) {
       console.log(err);
     }

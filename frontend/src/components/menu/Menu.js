@@ -115,7 +115,7 @@ function Menu() {
 
   return (
     <StyledMenu>
-      <SectionTitle>Menú</SectionTitle>
+      <SectionTitle>Menu</SectionTitle>
 
       <SearchBarWrapper>
         <SearchBar setSearch={setTitle} defaultValue={title} />

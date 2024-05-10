@@ -68,22 +68,22 @@ export default function DashboardNav() {
     {
       url: "/dashboard/myProducts",
       imageSrc: productsIcon,
-      title: "Productos",
+      title: "Products",
     },
     {
       url: "/dashboard/newProduct",
       imageSrc: newProduct,
-      title: "Crear nuevo producto",
+      title: "Create new product",
     },
     {
       url: "/dashboard/categories",
       imageSrc: categoriesIcon,
-      title: "Categorias",
+      title: "Categories",
     },
     {
       url: "/dashboard/orders",
       imageSrc: ordersIcon,
-      title: "Pedidos",
+      title: "Requests",
     },
   ];
   return (

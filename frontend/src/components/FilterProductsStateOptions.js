@@ -11,9 +11,9 @@ export default function FilterProductsStateOptions({setStatePreferece,defaultVal
 
 return(
 <OptionList name="filterProductsByState"  value={defaultValue}onChange={(e) =>handelChange(e)}>
-<Option value="all" >Todos</Option>
-<Option value="active" >Activos</Option>
-<Option value="inactive" >Inactivos</Option>
+<Option value="all" >All</Option>
+<Option value="active" >Active</Option>
+<Option value="inactive" >Inactive</Option>
 </OptionList>
 
 );

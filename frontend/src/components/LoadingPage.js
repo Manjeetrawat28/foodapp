@@ -1,6 +1,6 @@
-import styled  from 'styled-components'
-import {useStorage} from '../context/useStorage'
-import {LoaderSpinner} from './LoaderSpinner'
+import styled from 'styled-components'
+import { useStorage } from '../context/useStorage'
+import { LoaderSpinner } from './LoaderSpinner'
 
 const Page = styled.main`
 position:fixed;
@@ -16,13 +16,13 @@ z-index:2000;
 background: #fff;
 
 `;
-export default function LoadingPage(props){
-      let {isLoading}  = useStorage()
-  return(
+export default function LoadingPage(props) {
+  let { isLoading } = useStorage()
+  return (
 
-   (isLoading || props.isLoading) ?
-   <Page  ><LoaderSpinner data-testid='loadingSpinner' /></Page>
- : null
+    (isLoading || props.isLoading) ?
+      <Page  ><LoaderSpinner data-testid='loadingSpinner' /></Page>
+      : null
 
   )
 }

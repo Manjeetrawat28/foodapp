@@ -29,13 +29,13 @@ const SocialIcon = styled.img`
 export default function SocialsMenu(props) {
   return (
     <StyledSocialsMenu>
-      <SocialLink href="#!" target="_blank">
+      <SocialLink href="https://www.facebook.com/" target="_blank">
         <SocialIcon src={facebook} alt="facebook"></SocialIcon>
       </SocialLink>
-      <SocialLink href="#!" target="_blank">
+      <SocialLink href="https://www.instagram.com/" target="_blank">
         <SocialIcon src={instagram} alt="instagram"></SocialIcon>
       </SocialLink>
-      <SocialLink href="#!" target="_blank">
+      <SocialLink href="https://www.twitter.com/" target="_blank">
         <SocialIcon src={twitter} alt="twitter"></SocialIcon>
       </SocialLink>
     </StyledSocialsMenu>

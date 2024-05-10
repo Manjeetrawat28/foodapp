@@ -1,42 +1,42 @@
-import {Redirect,Route} from 'react-router-dom'
-import {useContext } from 'react' 
+import { Redirect, Route } from 'react-router-dom'
+import { useContext } from 'react'
 import AppContext from '../context/app-context'
-export default function PrivateRoute  ({component: Component, ...rest}) {
-       const {isAdmin,isModerator} = useContext(AppContext);
+export default function PrivateRoute({ component: Component, ...rest }) {
+    const { isAdmin, isModerator } = useContext(AppContext);
 
-       const AdminPrivateRoutes = ["/dashboard/users"] ;
-       
-       let requireAdmin;
+    const AdminPrivateRoutes = ["/dashboard/users"];
 
-       for( let i =0 ; i < AdminPrivateRoutes.length ; i ++){
-          if( rest.path === AdminPrivateRoutes[i]) requireAdmin = true 
+    let requireAdmin;
 
-       }
-       if(requireAdmin){
+    for (let i = 0; i < AdminPrivateRoutes.length; i++) {
+        if (rest.path === AdminPrivateRoutes[i]) requireAdmin = true
 
-return (
+    }
+    if (requireAdmin) {
 
-        <Route {...rest} render={props => (
-          
-            (isAdmin)?
-                <Component {...props} />
-            : <Redirect to="/authentication/login" />
-        )} />
-    );
+        return (
+
+            <Route {...rest} render={props => (
+
+                (isAdmin) ?
+                    <Component {...props} />
+                    : <Redirect to="/authentication/login" />
+            )} />
+        );
 
 
-       }else{
-         
-   return (
+    } else {
 
-        <Route {...rest} render={props => (
-          
-            (isAdmin  || isModerator)?
-                <Component {...props} />
-            : <Redirect to="/authentication/login" />
-        )} />
-    );
+        return (
 
-       }
- 
+            <Route {...rest} render={props => (
+
+                (isAdmin || isModerator) ?
+                    <Component {...props} />
+                    : <Redirect to="/authentication/login" />
+            )} />
+        );
+
+    }
+
 };

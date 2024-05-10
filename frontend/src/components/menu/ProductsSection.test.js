@@ -26,7 +26,7 @@ describe("ProductsSection render", () => {
       </CartContext.Provider>
     );
     expect(
-      screen.getByText("No se han encontrado coincidencias, intenta de nuevo!!")
+      screen.getByText("No matches found, try again!!")
     ).toBeInTheDocument();
   });
 
@@ -47,7 +47,7 @@ describe("ProductsSection render", () => {
 
     expect(
       screen.queryByText(
-        "No se han encontrado coincidencias, intenta de nuevo!!"
+        "No matches found, try again!!"
       )
     ).not.toBeInTheDocument();
 

@@ -11,7 +11,7 @@ const Container = styled.section`
 export default function CarrouselSection() {
   return (
     <>
-      <SectionTitle>Últimas Novedades</SectionTitle>
+      <SectionTitle>Latest news</SectionTitle>
       <Container>
         <NewestProductsCarrousel />
       </Container>

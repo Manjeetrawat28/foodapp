@@ -64,7 +64,7 @@ const updateProductAPI = async ({
         history.push('/dashboard/myProducts');
       }, 2000);
     } else if (response.status === 403) {
-      onError('Se require rol de Administrador');
+      onError('Administrator role required');
     }
   } catch (err) {
     console.error(err);

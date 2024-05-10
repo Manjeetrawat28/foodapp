@@ -77,7 +77,7 @@ export default function useUserOrdersPage({ closeNotification }) {
         setIsLoadingPage(false);
       } catch (err) {
         if (err.name === "AbortError") {
-          console.log("Fetch Canseled: caught abort");
+          console.log("Fetch Cancled: caught abort");
         } else {
           console.log(err);
         }

@@ -33,7 +33,7 @@ const newsletterSubscriptionAPI = async ({ info, setIsSuccessfullySend, onError 
         setIsSuccessfullySend(false);
       }, 3000);
     } else if (response.status === 500) {
-      onError('Error en el servidor, vuelva a intentar');
+      onError('Server error, try again');
     }
   } catch (err) {
     console.error(err);

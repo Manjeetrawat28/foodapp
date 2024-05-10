@@ -234,7 +234,7 @@ export default function SignupForm() {
         <ErrorServerMessage>{serverError}</ErrorServerMessage>
 
         <FormLink to="/authentication/login">
-          ¿Ya tienes una cuenta? <b>Login</b>{" "}
+          Already have an account? <b>Login</b>{" "}
         </FormLink>
         <ButtonPrimary as="input" type="submit" value="Sing Up" />
         {isFormLoading && <LoaderSpinner data-testid="spinner" small />}

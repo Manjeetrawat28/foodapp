@@ -30,7 +30,7 @@ export default function SinginForm({ setIsModalOpened }) {
         <UserEmailInput errors={errors} register={register} name="userEmail" />
         <UserPasswordInput
           name="userPassword"
-          placeholder="Tu contraseña..."
+          placeholder="Your Password"
           errors={errors}
           register={register}
         />
@@ -38,10 +38,10 @@ export default function SinginForm({ setIsModalOpened }) {
         <ErrorServerMessage>{serverError}</ErrorServerMessage>
 
         <FormLink to="/authentication/singUp">
-          ¿Todavía no tienes una cuenta? <b>Sing Up</b>{" "}
+          do not have an account? <b>Sing Up</b>{" "}
         </FormLink>
         <FormLink as="a" onClick={() => setIsModalOpened(true)}>
-          Olvidaste tu contraseña?
+          forget your password?
         </FormLink>
         <ButtonPrimary as="input" type="submit" value="Login" />
         {isFormLoading && <LoaderSpinner small />}

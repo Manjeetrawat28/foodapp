@@ -39,7 +39,7 @@ export default function useDashboardOrderDetails() {
         setIsLoading(false);
       } catch (err) {
         if (err.name === "AbortError") {
-          console.log("Fetch Canseled: caught abort");
+          console.log("Fetch Cancelled: caught abort");
         } else {
           console.log(err);
           for (let i = 0; i < 6; i++) {

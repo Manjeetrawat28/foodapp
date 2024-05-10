@@ -1,8 +1,8 @@
 import CartContext from './cart-context'
-import { useContext} from 'react'
+import { useContext } from 'react'
 
-export function useCartStorage(){
+export function useCartStorage() {
 
-  return  useContext(CartContext)
+  return useContext(CartContext)
 }
 

@@ -124,7 +124,7 @@ const loginAPI = async ({
 
     setIsLoading(false);
     setServerError(
-      'Ha ocurrido un error en el servidor, por favor inténtelo de nuevo'
+      'An error has occurred on the server, please try again'
     );
   }
 };

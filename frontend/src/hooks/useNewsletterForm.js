@@ -20,7 +20,7 @@ export default function useNewsletterForm() {
 
     isLogin
       ? newsletterSubscribtionAPI({ info, setIsSuccessfullySend })
-      : alert("Para poder subscribirse es necesario que inicie seción");
+      : alert("To be able to subscribe, you must log in to the section");
   }
 
   return { register, handleSubmit, errors, onSubmit };

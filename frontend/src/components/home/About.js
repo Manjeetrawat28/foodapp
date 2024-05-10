@@ -85,13 +85,10 @@ export default function About() {
           <SectionTitle>About us</SectionTitle>
 
           <p>
-            Hello, it's really a pain to be followed. Sorrow
-            times that therefore resilience indeed For no one corrupted them
-            just let it be easy to be flattered, let every man be pleased with pleasure. Pain,
-            to refuse and? Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Pleasures fall as if the body had nothing to spare
-            You must be rejected! But let it be, let him seek those who praise him
-            to some we bring a laborious pardon from or. He hates it, but I'll open it!
+          We're passionate about connecting food lovers with their favorite local restaurants, 
+          offering a diverse range of cuisines to tantalize your taste buds. 
+          Whether you're craving gourmet burgers, authentic Italian pizza, spicy Thai curry, 
+          or healthy salads, we have something for everyone.
           </p>
           <Features>
             <div>

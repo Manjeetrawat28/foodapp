@@ -117,7 +117,7 @@ function DashboardProducts() {
 
       {!isLoading && products?.length === 0 ? (
         <NotFoundMessage>
-          No se han encontrado coincidencias, intenta de nuevo!!
+          No matches found, try again!!
         </NotFoundMessage>
       ) : (
         <StyledProductsSection isLoading={isLoading}>

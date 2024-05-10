@@ -89,7 +89,7 @@ export default function ShoppingCart() {
   return (
     <StyledCart isCartOpen={isCartOpen}>
       <CartHeader>
-        <CartTitle>Mi carrito</CartTitle>
+        <CartTitle>My cart</CartTitle>
       </CartHeader>
 
       {cartProducts?.length > 0 ? (
@@ -104,16 +104,16 @@ export default function ShoppingCart() {
       ) : null}
 
       <CartResume>
-        <h2>Total: ${totalCost}</h2>
+        <h2>Total: ₹{totalCost}</h2>
 
         {isCartLoading ? (
           <LoaderSpinner data-testid="spinner" small />
         ) : (
           <>
-            <MakeOrderButton onClick={handelOrder}>Ordenar</MakeOrderButton>
+            <MakeOrderButton onClick={handelOrder}>Order</MakeOrderButton>
 
             <DeleteAllButton onClick={emptyCartAndResetTotalCost}>
-              Vaciar Carrito
+              Empty Cart
             </DeleteAllButton>
           </>
         )}

@@ -73,62 +73,62 @@ export default function Footer() {
         <FooterSection>
           <Logo src={logo} alt="logo"></Logo>
           <p>
-            El principal componente para un entorno saludable y de autoestima.
+          The main component for a healthy environment and self-esteem.
           </p>
         </FooterSection>
         <FooterSection>
-          <h4>NUESTROS LOCALES</h4>
+          <h4>OUR LOCATIONS</h4>
           <address>
             <List>
               <ListItem>
                 <Icon>
                   <img src={locationIcon} alt="location"></img>
                 </Icon>{" "}
-                <Link> 984 Calle, Barrio, Córdoba</Link>
+                <Link> Sec 14, Hisar, Haryana</Link>
               </ListItem>
               <ListItem>
                 <Icon>
                   <img src={locationIcon} alt="location"></img>
                 </Icon>{" "}
-                <Link>295 Calle, Barrio, Córdoba</Link>
+                <Link>PLA, Main Market, Hisar </Link>
               </ListItem>
             </List>
           </address>
         </FooterSection>
         <FooterSection>
-          <h4>CONTACTO</h4>
+          <h4>CONTACT</h4>
           <address>
             <List>
               <ListItem>
                 <Icon>
                   <img src={phoneIcon} alt="phone"></img>
                 </Icon>{" "}
-                <Link href="tel://3513850064">351 3850064</Link>
+                <Link href="tel://3513850064">9053878231</Link>
               </ListItem>
               <ListItem>
                 <Icon>
                   <img src={emailcone} alt="email"></img>
                 </Icon>{" "}
-                <Link href="mailto:brisaabiaildiaz2000@gmial.com">
-                  brisaabiaildiaz2000@gmial.com
+                <Link href="mailto:manjeetrawat1001@gmail.com">
+                  manjeetrawat1001@gmail.com
                 </Link>
               </ListItem>
             </List>
           </address>
         </FooterSection>
         <FooterSection>
-          <h4>HORARIOS DE APERTURA</h4>
+          <h4>OPENING TIMES</h4>
           <List>
             <ListItem>
-              <Hours> Lun - Vier --------- 9am - 12pm</Hours>
+              <Hours> Mon - Fri --------- 9am - 12pm</Hours>
             </ListItem>
             <ListItem>
-              <Hours> Sabados --------- 9am - 12pm</Hours>
+              <Hours> Sat --------- 9am - 10pm</Hours>
             </ListItem>
             <ListItem>
               <Hours>
                 {" "}
-                Domingos --------- <Span>Cerrado</Span>
+                Sundays --------- <Span>Close</Span>
               </Hours>
             </ListItem>
           </List>

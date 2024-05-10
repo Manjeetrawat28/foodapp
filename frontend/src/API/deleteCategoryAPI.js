@@ -7,7 +7,7 @@ export default async function deleteCategoryAPI({ categorySelectId, token }) {
       token
     );
     if (response.status === 403 || response.status === 401) {
-      alert("Se require rol de Administrador");
+      alert("Administrator role required");
     }
   } catch (err) {
     console.log(err);

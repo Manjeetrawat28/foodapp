@@ -56,7 +56,7 @@ const uploadUserAPI = async ({
       setServerError('');
       setIsEditing(false);
     } else if (response.status === 403) {
-      onError('Se require rol de Administrador');
+      onError('Administrator role required');
     } else {
       setServerError(json.message);
     }

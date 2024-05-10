@@ -1,7 +1,7 @@
-import styled  from 'styled-components'
-import {ErrorMessage} from './ContactForm'
+import styled from 'styled-components'
+import { ErrorMessage } from './ContactForm'
 import useNewsletterForm from '../../hooks/useNewsletterForm'
-import {Button} from '../Buttons'
+import { Button } from '../Buttons'
 
 const StyledNewsletter = styled.article`
 box-sizing:border-box:
@@ -21,7 +21,7 @@ padding: 10px 15px;
   min-height:100px;
 }
 `;
-const NewsletterTitle= styled.h2`
+const NewsletterTitle = styled.h2`
 text-transform: uppercase;
 font-size:30px;
 @media screen and (min-width: 550px){
@@ -32,10 +32,10 @@ font-size:30px;
 }
 `;
 
-const NewsletterText= styled.div`
+const NewsletterText = styled.div`
 color:#fff;
 `;
-const StyledNewsletterForm= styled.form`
+const StyledNewsletterForm = styled.form`
 line-height: 0.8em;
 display:flex;
 flex-flow:column;
@@ -46,7 +46,7 @@ justify-content:center;
 }
 `;
 
-const NewsletterFormWrapper= styled.div`
+const NewsletterFormWrapper = styled.div`
 width:100%;
 display:flex;
 flex-wrap:wrap;
@@ -58,9 +58,9 @@ align-items:center;
 }
 
 `;
-const NewsletterInput= styled.input.attrs(props => ({
+const NewsletterInput = styled.input.attrs(props => ({
   type: 'text',
-  placeholder: 'Ingrese su email',
+  placeholder: 'Enter your email',
 
 }))`
 padding: 17px 10px 17px 20px;
@@ -77,40 +77,40 @@ padding: 17px 10px 17px 20px;
   min-height;50px;
 `;
 
-export default function NewsletterForm(){
+export default function NewsletterForm() {
 
-const {register,handleSubmit,errors,onSubmit} =useNewsletterForm()
+  const { register, handleSubmit, errors, onSubmit } = useNewsletterForm()
 
 
-  return(
-<StyledNewsletter>
-  <Wrapper>
-    <NewsletterText>
-      <NewsletterTitle>subscribe to our newsletter</NewsletterTitle>
-<p>The company itself is a very successful company. </p>
-    </NewsletterText>
-    <StyledNewsletterForm onSubmit={handleSubmit(onSubmit)}>
-                 {errors.userEmail && <ErrorMessage>{errors.userEmail.message}</ErrorMessage>}
-      <NewsletterFormWrapper>
-        <NewsletterInput 
-          name="userEmail"
+  return (
+    <StyledNewsletter>
+      <Wrapper>
+        <NewsletterText>
+          <NewsletterTitle>subscribe to our newsletter</NewsletterTitle>
+          <p>The company itself is a very successful company. </p>
+        </NewsletterText>
+        <StyledNewsletterForm onSubmit={handleSubmit(onSubmit)}>
+          {errors.userEmail && <ErrorMessage>{errors.userEmail.message}</ErrorMessage>}
+          <NewsletterFormWrapper>
+            <NewsletterInput
+              name="userEmail"
 
-          ref={register({
-                     required: true,
-                    
-                      pattern:{
-                      value:/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
-                      message: "*Invalid Email"
-                      }
-          })}
-           style={{ borderColor: errors.userEmail && "#000" }}
-        ></NewsletterInput>
-      
-<Button as="input" type="submit" value="Subscribe"/>
+              ref={register({
+                required: true,
 
-      </NewsletterFormWrapper>
-    </StyledNewsletterForm>
-  </Wrapper>
-</StyledNewsletter>
+                pattern: {
+                  value: /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/,
+                  message: "*Invalid Email"
+                }
+              })}
+              style={{ borderColor: errors.userEmail && "#000" }}
+            ></NewsletterInput>
+
+            <Button as="input" type="submit" value="Subscribe" />
+
+          </NewsletterFormWrapper>
+        </StyledNewsletterForm>
+      </Wrapper>
+    </StyledNewsletter>
   );
 }

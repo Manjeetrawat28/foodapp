@@ -153,7 +153,7 @@ export default function ContactForm() {
 
           <TextInput
             type="text"
-            placeholder="Affair..."
+            placeholder="Subject"
             name="subject"
             ref={register({
               required: "*This field is required",
@@ -179,7 +179,7 @@ export default function ContactForm() {
         </Form>
       </FormSection>
       <InfoSection>
-        <ContactTitle>Contactenos</ContactTitle>
+        <ContactTitle>Contact Us</ContactTitle>
         <p>
         Customer service is very important, there will be no customer support
           fear The pain is very important, there will be no coaching
@@ -190,13 +190,13 @@ export default function ContactForm() {
             <Icon>
               <img src={phoneIcon} alt="phone"></img>
             </Icon>{" "}
-            <ContactLink>+66 396 847 2637</ContactLink>
+            <ContactLink>+91 9053878231</ContactLink>
           </ListItem>
           <ListItem>
             <Icon>
               <img src={emaIlcon} alt="email"></img>
             </Icon>{" "}
-            <ContactLink>Hello@Burger.Com</ContactLink>
+            <ContactLink>manjeetrawat1001@gmail.com</ContactLink>
           </ListItem>
         </List>
         <SocilasMenu />

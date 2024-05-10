@@ -36,7 +36,7 @@ export default function ProductsSectionComponent({ isLoading, products }) {
     <ProductsSection>
       {!isLoading && products?.length === 0 ? (
         <NotFoundMessage>
-          No se han encontrado coincidencias, intenta de nuevo!!
+          No matches found, try again!
         </NotFoundMessage>
       ) : (
         products?.map((product) => (

@@ -1,78 +1,78 @@
-import {useParams,useHistory} from 'react-router-dom'
-import {useEffect,useState} from 'react'
-import {useStorage} from '../context/useStorage'
+import { useParams, useHistory } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useStorage } from '../context/useStorage'
 
 
 
-export default function useUserOrderDetails(){
+export default function useUserOrderDetails() {
 
-    const {setIsLoading,token,isLoading} = useStorage()
+  const { setIsLoading, token, isLoading } = useStorage()
 
-let history = useHistory()
-let {orderID}=  useParams()
-
-
- const [thisOrder,setThisOrder] = useState({})
-
- useEffect(()=>{
+  let history = useHistory()
+  let { orderID } = useParams()
 
 
-  const controller = new AbortController()
- const signal = controller.signal
+  const [thisOrder, setThisOrder] = useState({})
 
-  const fechOrder= async () =>{
-  try{
-
-     const headers = new Headers();
-      headers.append('Accept', 'application/json');
-      headers.append('Authorization', `Bearer ${token}`);
+  useEffect(() => {
 
 
-    const setting = {
+    const controller = new AbortController()
+    const signal = controller.signal
+
+    const fechOrder = async () => {
+      try {
+
+        const headers = new Headers();
+        headers.append('Accept', 'application/json');
+        headers.append('Authorization', `Bearer ${token}`);
+
+
+        const setting = {
           method: 'GET',
           headers: headers,
-signal,
+          signal,
         }
 
-     let res = await fetch(`/api/orders/${orderID}`,setting)
+        let res = await fetch(`/api/orders/${orderID}`, setting)
 
 
-   if(res.status === 404) {
-            setIsLoading(false)
-      return history.push('/notFound')
-     }
-      let json = await res.json()
+        if (res.status === 404) {
+          setIsLoading(false)
+          return history.push('/notFound')
+        }
+        let json = await res.json()
 
-    setThisOrder(json.data)
+        setThisOrder(json.data)
 
-     setIsLoading(false)
+        setIsLoading(false)
 
-  }catch(err){
-    if(err.name === 'AbortError'){
-   console.log('Fetch Canseled: caught abort')
- }else{
+      } catch (err) {
+        if (err.name === 'AbortError') {
+          console.log('Fetch Cancled: caught abort')
+        } else {
 
-     console.log(err)
-    for(let i = 0; i < 6 ;i++){
+          console.log(err)
+          for (let i = 0; i < 6; i++) {
+            fechOrder()
+
+          }
+
+        }
+      }
+    }
+
     fechOrder()
 
-        }
 
-  }
-}
-  }
+    return () => {
+      controller.abort()
+    }
 
-  fechOrder()
-
-
-  return () =>{
-     controller.abort()
-   }
-
- },[orderID])
+  }, [orderID])
 
 
 
-return {thisOrder,isLoading}
+  return { thisOrder, isLoading }
 
 }
